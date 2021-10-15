@@ -1,0 +1,47 @@
+<div class="toolbar" role="banner">
+  <span style='padding-left:3%;font-size:20px;'>Команда ЕЖИ</span>
+</div>
+
+<div class="background">
+  <div class="container" role="main">
+
+    <div class='head'>
+      <p class='list'>Список работ:</p>
+    </div>
+
+    <br>
+
+    <div *ngIf="data" class="content">
+
+      <div class="arrow">
+        <button class='btn' *ngIf="!data.first" (click)="requestPage(data.number)" class="animated btn">
+          ←
+        </button>
+      </div>
+
+      <div class="page">
+        <div *ngFor="let job of data.content" class="job animated" (click)="onClickJob(job)">
+          <span>Задача</span>
+          <span>№{{ job.id }}</span>
+        </div>
+      </div>
+
+      <div class="arrow">
+        <button *ngIf="!data.last" (click)="requestPage(data.number + 2)" class="animated btn">
+          →
+        </button>
+      </div>
+    </div>
+
+    <br>
+
+    <div *ngIf="data">
+      <p class='pages'>Страница  {{ data.number +1 }}/{{ data.totalPages }}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="job" [@fade]>
+  <div class="blackout" (click)="onResetJob()"></div>
+  <app-menu [job]="job"></app-menu>
+</div>

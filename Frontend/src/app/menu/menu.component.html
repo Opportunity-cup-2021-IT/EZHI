@@ -1,0 +1,32 @@
+<div *ngIf="job" class="container">
+
+  <div class="info">
+    Задача №{{ job.id }}
+  </div>
+
+  <div class="info">
+    Дата начала: {{ formatDate(job.start) }}
+  </div>
+
+  <div *ngIf="job.end != job.start" class="info">
+    Дата окончания: {{ formatDate(job.end) }}
+  </div>
+
+  <div *ngIf="job.end == job.start" class="info">
+    Эта задача является вехой
+  </div>
+
+  <input type="number" placeholder="Например, 245" [(ngModel)]="days" (keyup.enter)="onCalc()">
+
+  <button (click)="onCalc()" *ngIf="!calc">
+    Посчитать
+  </button>
+  <button *ngIf="calc">
+    Считаю...
+  </button>
+
+  <div *ngIf="cost" class="info">
+    Затраты: {{ cost }} {{ (cost % 10 == 1) ? "рубль" : (cost % 10 != 0 && cost % 10 < 5) ? "рубля" : "рублей"}}
+  </div>
+
+</div>

@@ -1,0 +1,123 @@
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1d70b4;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar span {
+  padding-left:3%;
+  font-size:20px;
+}
+
+.background {
+  background-color: #bac8d3;
+  margin: 0 10%;
+  box-shadow: 0 0 3px #000000aa;
+}
+
+.container {
+  display: flex;
+  margin: 60px auto 32px;
+  padding: 32px 16px 8px 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  color:white;
+  font-weight:bold;
+  font-size:19px;
+}
+
+.pages {
+  font-weight:bold;
+  font-size:20px;
+  color: #1d70b4;
+}
+
+.list {
+  font-weight:bold;
+  font-size:20px;
+  color:white;
+}
+
+.head {
+  background-color: #1d70b4;
+  padding:10px;
+  border-radius:20px;
+  box-shadow: 0 0 3px #000000aa;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 75px;
+  background-color: rgb(241, 231, 255);
+  padding: 10px 10px;
+  margin: 5px;
+  box-shadow: 0 0 3px #000000aa;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.job span {
+  text-align: center;
+  font: bold 1em monospace;
+  font-size: 18px;
+  color: #1d70b4;
+}
+
+.arrow {
+  align-self: center;
+  margin: 0 50px;
+  min-width: 30px;
+  height: 30px;
+}
+
+.arrow button {
+  background-color: #1d70b4;
+  box-shadow: 0 0 3px #000000aa;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.animated {
+  transition: background-color .2s ease-out, transform .2s ease-out;
+}
+
+.animated:hover {
+  background-color: #fff2e6;
+  transform: scale(1.1);
+}
